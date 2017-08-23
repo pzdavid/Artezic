@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artezic</title>
+  <link href="audioMaster/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="audioMaster/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="accesjson.js"></script>
+
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+  
+ 
+</head>
+  
+<body onload="onDocumentLoaded()">
+
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <a href="index.html"><img src="images/logo.png" alt="logo artezic" id="logo"/></a>
+      <button type="button" data-target=".navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse">
+     <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="submit" class="form-control icon icon-search" placeholder="RECHERCHE" id="recherche" value="submit" >
+          
+          <a href="#" id="login" data-backdrop="false" data-toggle="modal" data-target="#myModal"><img src="images/cadena.png" alt="LOGIN" name="cadena" id="cadena" title="LOG IN"/></a>
+        </div>      
+      </form>
+      <ul class="nav navbar-nav">
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li><a href="#créatrions" id="lien" class="lienCT">CREATIONS TERMINEES</a></li>
+        <li><a href="#sdfsd" id="lien" class="lienCC">CREATIONS EN COURS</a></li>
+        <li><a href="#sdfsdf" id="lien" class="lienT">THEMES</a></li>
+        <li><a href="#sdfsd" id="lien" class="mes_crea">MES CREATIONS</a></li>
+      </ul>
+     
+            
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">CONNEXION</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Identifiant</label>
+                  <div class="col-sm-10">
+                    <input required type="email" class="form-control" id="inputEmail3" placeholder="Identifiant">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Mot de passe</label>
+                  <div class="col-sm-10">
+                    <input required type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+    
+<div class="CTpresentation">
+  <div class="row">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="row clearfix">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                <img src="images/CreaTerm/crea01.png" class="img-CTpresentation" alt="Creation terminee"> 
+                <p class="NomCrea">LA BALLADE DU CHEVAL</p>
+                <p class="statu">Terminé</p>
+                <div class="btn-CT"> 
+                  <input class="btn-CT-pres" type="submit" value ="PRÉSENTATION" onclick="window.location='presentation.html';" ><br />
+                  <input class="btn-CT-com" type="submit" value ="COMMENTAIRES" onclick="window.location='commentaire.html';" >
+                </div>
+              </div>
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+            </div>
+          </div>
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <div class="descriptionCT">
+            <p class="block-pres">CREATEUR</p>
+            <img src="images/photoProfil/Sarah.png" class="img-creaTerm"alt="Sarah">                
+            <p class="block-pres-nom">SARAH J.</p>
+            <p class="block-pres">AUTEURS</p>
+            <div class="photoprofil">
+                  <figure>
+                    <img src="images/photoProfil/Arthur.png" class="img-auteur" alt="Arthur">
+                    <figcaption>Arthur P.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Camille.png" class="img-auteur" alt="Camille">
+                    <figcaption>Camille S.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Eugene.png" class="img-auteur" alt="Eugene">
+                    <figcaption>Eugene R.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Justine.png" class="img-auteur" alt="Justine">
+                    <figcaption>Justine L.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Lois.png" class="img-auteur" alt="Lois">
+                    <figcaption>Lois J.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Mathilde.png" class="img-auteur" alt="Mathilde">
+                    <figcaption>Mathilde F.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Eric.png" class="img-auteur" alt="Eric">
+                    <figcaption>Eric H.</figcaption>
+                  </figure>
+                </div>
+            <p class="block-pres">PROJET</p>
+            <p class="block-pres-date">DÉBUT DE CRÉATION : 23 juin 2016<br />FIN DE CRÉATION : 23 Novembre 2016<br />DURÉE : 5 Mois</p>
+            <p class="block-pres-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae magna eget felis rhoncus congue eu eget orci. Nunc pellentesque sem non ipsum eleifend euismod. Integer quis augue at magna volutpat tempor non sed massa. Vivamus at nulla maximus nisl maximus maximus. Nunc tristique pulvinar nisl sed vehicula. Nam in ullamcorper diam. Donec vel eleifend purus. Curabitur id diam efficitur, efficitur ipsum in, efficitur velit. Nam in lacinia velit. Fusce auctor augue eu turpis venenatis ultrices. Praesent a enim vitae justo finibus gravida id gravida nibh. In et leo magna.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+  </div>
+  <div class="row">
+    
+  <div class="col-xs-4 col-sm-6 col-md-12 col-lg-12">
+          
+   <iframe src="PLAYER/index.html" width="1300px" height="800px">
+              
+              <p> test</p>
+              
+   </iframe>
+      
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+      <div class="row">
+        <div class=" col-xs-2 col-sm-2 col-md-3 col-lg-2 a-propos">
+          <p><a href="a-propos.html">A PROPOS</a></p>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-2 faq">
+          <p><a href="faq.html"> FAQ </a></p>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-4 col-lg-5"></div>  
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-3 reseaux-sociaux">
+          <a href="www.facebook.com"><img src="images/facebook.png" alt="image Facebook"></a>
+          <a href="www.twitter.com"><img src="images/twitter.png" alt="image Facebook" ></a>
+          <a href="www.soundcloud.com"><img src="images/soundcloud.png" alt="image Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+  
+
+<script src="bootstrap/js/jquery.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
