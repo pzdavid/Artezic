@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artezic</title>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> <!-- GoogleFont Roboto Condensed -->
+   <link rel="icon" type="image/png" href="images/logo.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  
+</head>
+  
+<body>
+
+<nav class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" data-target=".navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a href="index.html"><img src="images/logo.png" alt="logo artezic" id="logo"/></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li><a href="creationsTerminees.html" class="lienCT">CREATIONS TERMINEES</a></li>
+        <li><a href="creationsEnCours.html" class="lienCC">CREATIONS EN COURS</a></li>
+        <li><a href="#sdfsdf" id="themes" class="lienT">THEMES</a></li>
+        <li><a href="mesProjetsEnCours.html" id="mes_crea">MES CREATIONS</a></li>
+        <li><button class="btn btn-default btn-lg" data-toggle="modal" type="button" id="bouton" data-target="#search" title="recherche">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </li>
+        <li><button class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" type="button" id="home" title="CONNEXION">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ul>
+      <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">RECHERCHE</label>
+                  <div class="col-sm-10">
+                    <input required type="text" class="form-control" placeholder="Recherche">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Identifiant</label>
+                  <div class="col-sm-10">
+                    <input required type="email" class="form-control" id="inputEmail3" placeholder="Identifiant">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Mot de passe</label>
+                  <div class="col-sm-10">
+                    <input required type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+<div class="CTcommentaire fondGris">
+  <div class="row">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="row">
+            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+              <div class="profilCreaTerminee">
+                <img src="images/CreaTerm/crea01.png" class="img-CTpresentation" alt="Creation terminee">
+                <p class="NomCrea">GO BACK HOME</p>
+                <p class="statu">Terminé</p>
+              </div>
+              <div class="btn-CT"> 
+                <input class="btn-CT-pres" type="submit" value ="PRÉSENTATION" onclick="window.location='presentationCreationsTerminees.html';" ><br />
+                <input class="btn-CT-com active" type="submit" value ="COMMENTAIRES" onclick="window.location='commentaireCreationsTerminees.html';">
+              </div>
+            </div>
+            <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 cadreCTcommentaire">
+          <div class="row"> <!-- Zone des commentaires -->
+            <div class="row">
+              <p class="block-pres">COMMENTAIRES</p>
+            </div> <!-- Titre -->
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Antoine.png" class="img-auteur-com" alt="Antoine">
+                 <p class="nomCom">Antoine P.<span class="dateCom">24/01/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">Ce morceau est très beau. Je me suis laissé bercer par la mélodie.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Mael.png" class="img-auteur-com" alt="Mael">
+                 <p class="nomCom">Maël G.<span class="dateCom">24/01/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">Il aurait peut-être fallu développer d'avantage de séquences avec un tempo rapide entrecoupés de séquences lentes.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Vincent.png" class="img-auteur-com" alt="Vincent">
+                 <p class="nomCom">Vincent N.<span class="dateCom">26/01/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">Musique très bien arrangée.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Lea.png" class="img-auteur-com" alt="Lea">
+                 <p class="nomCom">Léa D.<span class="dateCom">09/02/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">Très beau morceau, très bien écrit, qui mériterait de durer deux ou trois minutes de plus.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Ninon.png" class="img-auteur-com" alt="Ninon">
+                 <p class="nomCom">Ninon C.<span class="dateCom">09/02/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">Peut-être que l'arrivé plus tardive de la basse donnerai encore plus de puissance à ce morceau.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Alain.png" class="img-auteur-com" alt="Alain">
+                 <p class="nomCom">Alain F.<span class="dateCom">13/02/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">Belle énergie et harmonie entre les styles différents.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+            <div class="row commentaireUser">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <figure>
+                 <img src="images/photoProfil/Pauline.png" class="img-auteur-com" alt="Pauline">
+                 <p class="nomCom">Pauline C.<span class="dateCom">15/02/2017</span></p>
+                </figure>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="commentaire-user">On retrouve la sensibilité du morceau original mais avec une puissance apporté par les instruments choisis.</p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+          </div>
+          <div class="row messageForm"> <!-- Formulaire commentaire -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <textarea name="textarea" rows="5"></textarea>
+              <input type="submit" class="btn-CT-envoyer" value="Envoyer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+    
+<div class="footer">
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+      <div class="row">
+        <div class=" col-xs-4 col-sm-2 col-md-3 col-lg-2 a-propos">
+          <p><a href="apropos.html">A PROPOS</a></p>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-2 faq">
+          <p><a href="#"> FAQ </a></p>
+        </div>
+        <div class="col-xs-3 col-sm-5 col-md-4 col-lg-5"></div>  
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-3 reseaux-sociaux">
+          <a href="www.facebook.com"><img src="images/facebook.png" alt="image Facebook"></a>
+          <a href="www.twitter.com"><img src="images/twitter.png" alt="image Facebook" ></a>
+          <a href="www.soundcloud.com"><img src="images/soundcloud.png" alt="image Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+
+  
+<script src="script/bootstrap.min.js"></script>
+<script src="bootstrap/js/jquery.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

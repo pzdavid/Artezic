@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artezic</title>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> <!-- GoogleFont Roboto Condensed -->
+   <link rel="icon" type="image/png" href="images/logo.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div type="div" data-target=".navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+     <a href="index.html"><img src="images/logo.png" alt="logo artezic" id="logo"/></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li><a href="creationsTerminees.html" class="lienCT">CREATIONS TERMINEES</a></li>
+        <li><a href="creationsEnCours.html" class="lienCC">CREATIONS EN COURS</a></li>
+        <li><a href="#sdfsdf" id="themes" class="lienT">THEMES</a></li>
+        <li><a href="mesProjetsEnCours.html" id="mes_crea">MES CREATIONS</a></li>
+        <li><div class="btn btn-default btn-lg" data-toggle="modal" type="div" id="bouton" data-target="#search" title="recherche">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+        </li>
+        <li><div class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" type="div" id="home" title="CONNEXION">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          </div>
+        </li>
+      </ul>
+      <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">RECHERCHE</label>
+                  <div class="col-sm-10">
+                    <input required type="text" class="form-control" placeholder="Recherche">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Identifiant</label>
+                  <div class="col-sm-10">
+                    <input required type="email" class="form-control" id="inputEmail3" placeholder="Identifiant">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Mot de passe</label>
+                  <div class="col-sm-10">
+                    <input required type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+<div class="mesCreationsEnCours fondGris">
+  <div class="row">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                <div class="profilMesCreations">
+                  <img src="images/photoProfil/Sarah.png" class="img-mesCrea" alt="Sarah - mes creations"> 
+                  <p class="NomCrea">Sarah, 27 ans</p>
+                  <p class="profil-crea">Chanteuse, Pianiste</p>
+                </div>
+                <div class="btn-CT"> 
+                  <input class="btn-MC active" type="submit" value ="MES PROJETS EN COURS" onclick="window.location='mesProjetsEnCours.html';" >
+                  <input class="btn-MC" type="submit" value ="MES PROJETS ACHEVÉS" onclick="window.location='mesProjetsAcheves.html';" >
+                  <input class="btn-MC" type="submit" value ="MES AMIS" onclick="window.location='#';" >
+                  <input class="btn-MC" type="submit" value ="MES DEMANDES DE PROJET" onclick="window.location='#';" >
+                  <input class="btn-MC-pro" type="submit" value ="DEVENIR PRO" onclick="window.location='#';" >
+                </div>
+              </div>
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="row headerConversation">
+              <div class="colLeft col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="nomConversation">
+                  <div class="circle">1</div>
+                  <p>Mon autre côté</p>
+                </div>
+              </div>
+              <div class="colRight col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="row profilsConversation">
+                  <figure>
+                    <img src="images/photoProfil/Camille.png" class="img-auteur" alt="Camille">
+                    <figcaption>Camille S.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/photoProfil/Mathilde.png" class="img-auteur" alt="Mathilde">
+                    <figcaption>Mina F.</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="row conversation">
+              <div class="colLeft col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <div class="nomConversation">
+                    <div class="circle">1</div>
+                    <p>Big Picture</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Silver Lining</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Naked</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Loving Game</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>The Start</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>La Fôret</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Live Fast</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Older</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>L'aventure</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Superstition</p>
+                  </div>
+                  <div class="nomConversation">
+                  <div class="circle">1</div>
+                    <p>Requiem</p>
+                  </div>
+              </div>
+              <div class="colRight col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="row messageConversationLeft responsive">
+                  <div class="messageImage col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img src="images/photoProfil/Camille.png" class="img-auteur" alt="Camille">
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <span>Camille S.</span>
+                    <p>Salut, j ai ajouté un solo de violon à la composition.</p>
+                  </div>
+                </div>
+                <div class="row messageConversationLeft responsive">
+                  <div class="messageImage col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img src="images/photoProfil/Mathilde.png" class="img-auteur" alt="Mathilde">
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <span>Mina F.</span>
+                    <p>Peux-tu le jouer plus piano ?</p>
+                  </div>
+                </div>
+                <div class="row messageConversationRight">
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <p>Je réfléchis à un arrangement pour les différents instruments</p>
+                  </div>
+                </div>
+                <div class="row messageConversationLeft">
+                  <div class="messageImage col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img src="images/photoProfil/Camille.png" class="img-auteur" alt="Camille">
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <span>Camille S.</span>
+                    <p>Je vais essayer de retravailler le passage du violon</p>
+                  </div>
+                </div>
+                <div class="row messageConversationLeft">
+                  <div class="messageImage col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img src="images/photoProfil/Camille.png" class="img-auteur" alt="Camille">
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <span>Camille S.</span>
+                    <p>J'importe le résultat au plus vite</p>
+                  </div>
+                </div>
+                <div class="row messageConversationLeft">
+                  <div class="messageImage col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img src="images/photoProfil/Mathilde.png" class="img-auteur" alt="Mathilde">
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <span>Mina F.</span>
+                    <p>Super !</p>
+                  </div>
+                </div>
+                <div class="row messageForm">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <textarea name="textarea" rows="5"></textarea>
+                    <input type="submit" value="Envoyer">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     </div>
+    </div>
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+  </div> 
+  <div class="row">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+      <div class="row">
+        <div class="col-xs-0 col-sm-4 col-md-0 col-lg-4"></div>
+        <div class="col-xs-12 col-sm-8 col-md-12 col-lg-8">
+          <iframe src="PLAYER/index.html"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2"></div>
+  </div>
+</div> 
+ 
+
+
+<div class="footer">
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+      <div class="row">
+        <div class=" col-xs-4 col-sm-2 col-md-3 col-lg-2 a-propos">
+          <p><a href="apropos.html">A PROPOS</a></p>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-2 faq">
+          <p><a href="#"> FAQ </a></p>
+        </div>
+        <div class="col-xs-3 col-sm-5 col-md-4 col-lg-5"></div>  
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-3 reseaux-sociaux">
+          <a href="www.facebook.com"><img src="images/facebook.png" alt="image Facebook"></a>
+          <a href="www.twitter.com"><img src="images/twitter.png" alt="image Facebook" ></a>
+          <a href="www.soundcloud.com"><img src="images/soundcloud.png" alt="image Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+<script src="script/bootstrap.min.js"></script>
+<script src="bootstrap/js/jquery.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

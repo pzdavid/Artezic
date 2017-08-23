@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artezic</title>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> <!-- GoogleFont Roboto Condensed -->
+   <link rel="icon" type="image/png" href="images/logo.png" />
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="accesjson.js"></script>
+</head>
+  
+<body>
+
+
+
+<nav class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" data-target=".navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a href="index.html"><img src="images/logo.png" alt="logo artezic" id="logo"/></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li><a href="creationsTerminees.html" class="lienCT">CREATIONS TERMINEES</a></li>
+        <li><a href="creationsEnCours.html" class="lienCC">CREATIONS EN COURS</a></li>
+        <li><a href="#sdfsdf" id="themes" class="lienT">THEMES</a></li>
+        <li><a href="mesProjetsEnCours.html" id="mes_crea">MES CREATIONS</a></li>
+        <li><button class="btn btn-default btn-lg" data-toggle="modal" type="button" id="bouton" data-target="#search" title="recherche">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </li>
+        <li><button class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" type="button" id="home" title="CONNEXION">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ul>
+      <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">RECHERCHE</label>
+                  <div class="col-sm-10">
+                    <input required type="text" class="form-control" placeholder="Recherche">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Identifiant</label>
+                  <div class="col-sm-10">
+                    <input required type="email" class="form-control" id="inputEmail3" placeholder="Identifiant">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Mot de passe</label>
+                  <div class="col-sm-10">
+                    <input required type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+    
+<div class="CTpresentation fondGris">
+  
+  <div class="row">
+    
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                <div class="profilCreaTerminee">
+                  <img src="images/CreaTerm/crea01.png" class="img-CECpresentation" alt="Creation terminee"> 
+                  <p class="NomCrea">GO BACK HOME</p>
+                  <p class="statu">Terminé</p>
+                </div>
+                <div class="btn-CT"> 
+                  <input class="btn-CT-pres active" type="submit" value ="PRÉSENTATION" onclick="window.location='presentationCreationsTerminees.html';" ><br />
+                  <input class="btn-CT-com" type="submit" value ="COMMENTAIRES" onclick="window.location='commentaireCreationsTerminees.html';" >
+                </div>
+              </div>
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+            </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 cadre">
+            
+            <p class="block-pres">CREATEUR</p>
+            <img src="images/photoProfil/Sarah.png" class="img-creaTerm" alt="Sarah">                
+            <p class="block-pres-nom">SARAH J.</p>
+            <p class="block-pres">AUTEURS</p>
+            
+            <div class="photoprofil">
+              <figure>
+                <img src="images/photoProfil/Camille.png" class="img-auteur" alt="Camille">
+                <figcaption>Camille S.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/photoProfil/Mathilde.png" class="img-auteur" alt="Mathilde">
+                <figcaption>Mina F.</figcaption>
+              </figure>
+            </div>
+            
+            <p class="block-pres">PROJET</p>
+            <p class="block-pres-date">DÉBUT DE CRÉATION : 23 juin 2016<br />FIN DE CRÉATION : 23 Janvier 2017<br />DURÉE : 7 Mois</p>
+            <p class="block-pres-description">Je me suis lancée pour la toute première fois, en tant qu'amateur. Merci à tout ceux qui ont participé à la composition de ce morceau, en particulier à Camille, et qui lui ont permis de voir le jour. Toutes critiques sont les bienvenues elles me permettrons de corriger et de soigner mes compositions futures. J'ai trouvé ici un beau moyen de partager ma passion et mon travail.</p>
+          
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    
+  </div>
+  
+</div>
+    
+
+<div class="footer">
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+      <div class="row">
+        <div class=" col-xs-4 col-sm-2 col-md-3 col-lg-2 a-propos">
+          <p><a href="apropos.html">A PROPOS</a></p>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-2 faq">
+          <p><a href="#"> FAQ </a></p>
+        </div>
+        <div class="col-xs-3 col-sm-5 col-md-4 col-lg-5"></div>  
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-3 reseaux-sociaux">
+          <a href="www.facebook.com"><img src="images/facebook.png" alt="image Facebook"></a>
+          <a href="www.twitter.com"><img src="images/twitter.png" alt="image Facebook" ></a>
+          <a href="www.soundcloud.com"><img src="images/soundcloud.png" alt="image Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+<script src="bootstrap/js/jquery.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

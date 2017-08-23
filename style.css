@@ -1,0 +1,1869 @@
+/*  
+	1.0 Reset
+	2.0 Header 
+		2.1 Liens navbar
+		2.2 Police
+		2.3 Position des éléments
+	3.0 Page d'accueil
+		3.1 Creations terminees
+		3.2 Creations en cours
+		3.3 Hover Vignette
+		3.4 Nuage de mot
+			3.4.1 Animation 1
+			3.4.2 Animation 2
+			3.4.3 Animation 3
+			3.4.4 Animation 4
+		3.5 Pop up
+	4.0 Creations terminees 
+		4.1 Presentation
+		4.2 Commentaires
+		4.3 Page
+	5.0 Création en cours 
+		5.1 Presentation
+		5.2 Page
+	6.0 Mes Créations
+		6.1 Menu Mes creations
+		6.2 Mes projets en cours
+			6.2.1 Conversation
+			6.2.2 Player
+		6.3 Mes projets termines
+	7.0 A propos
+	8.0 Global
+	9.0 Footer
+   10.0 Media Queries
+*/
+
+/* 1.0 Reset */
+
+body {
+	margin:0;
+  	padding:0;
+  	background: url(images/background.png) no-repeat center; 
+  	background-size: cover;
+	background-color: #585858;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.modal-header p {
+    font-size: 1.2em;
+}
+
+.row {
+	width: 100%;
+	margin: 10px 0px;
+}
+
+.navbar .row {
+	margin: 0px;
+}
+
+
+/* 2.0 Header */
+
+
+/* 2.1 Liens navbar*/
+
+.navbar a {
+	font-size: 1.5em;
+}
+
+#mes_crea {
+	margin-left: 70px;
+}
+
+.navbar p {
+    font-size: 1em;
+    padding-top: 8px;
+}
+
+.navbar-default {
+ 	background-color: #585858;
+ 	border: 0px;
+ 	margin-bottom: 0;
+}
+
+.lienCT {
+	border-bottom: #e83e67 solid 25px;
+	margin-right: 10px;
+	margin-left: 200px;
+}
+
+.lienCC {
+	border-bottom: #f18d6d solid 25px;
+	margin: 0 10px;
+}
+
+.lienT {
+	border-bottom:  #f5df94 solid 25px;
+	margin: 0 10px;
+}
+
+
+/* 2.2 Police */
+
+ .navbar .nav > li > a, .navbar .nav > li > a:hover, .navbar .nav > li > a:active, .navbar .nav > li > a:focus {  
+    color: white; 
+    margin-top: 100px;
+    font-size: 1.15em;
+    padding-left: 0;
+    padding-right: 0;
+} 
+
+.navbar-default .navbar-brand { 
+	color: white; 
+}
+
+
+/* 2.3 Position des éléments */
+
+#logo {
+	margin-left: 0px;
+}
+
+#bouton{
+	background-color: transparent;
+	border: none;
+	color: white;
+	margin-left: 100px;
+	margin-top: 0px;
+	text-align: center;
+	outline:none;
+}
+
+#home{
+	background-color: transparent;
+	color: white;
+	border: none;
+	margin-top: 0px;
+	text-align: center;
+	outline:none;
+}
+
+/* 2.4 Collapse */
+
+.navbar-collapse {
+	border: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* 3.0 Page d'accueil */
+
+
+/* 3.1 Creations terminees */
+
+
+
+
+/* 3.2 Creations en cours */
+
+.CECIndex {
+	padding: 30px 0px;
+}
+
+.CECIndex .col-md-12 {
+	height:185px;
+}
+
+
+/* 3.3 Hover Vignette*/
+
+.CTIndex .hovereffect, .CECIndex .hovereffect {
+	width: 100%;
+	height: 100%;
+  	float: left;
+  	overflow: hidden;
+  	position: relative;
+  	text-align: center;
+}
+
+.CTIndex .hovereffect .overlay:hover, .CECIndex .hovereffect .overlay:hover {
+	opacity: 1;
+}
+
+.CTIndex .hovereffect a, .CTIndex .hovereffect a:hover, .CECIndex .hovereffect a, .CECIndex .hovereffect a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.CTIndex .hovereffect .titleOverlay, .CECIndex .hovereffect .titleOverlay {
+	opacity: 0;
+}
+
+.CTIndex .hovereffect .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+}
+
+.CTIndex .hovereffect img {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.CTIndex .hovereffect h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	filter: alpha(opacity=0);
+	margin-top: 40%;
+}
+
+.CECIndex .hovereffect {
+	width: 100%;
+}
+
+.CECIndex .hovereffect .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: rgba(0,0,0,0.5);
+}
+
+.CECIndex .hovereffect img, .profilCreaEnCours img {
+	display: block;
+	position: relative;
+	width: 100%;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+}
+
+.CECIndex .hovereffect h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	filter: alpha(opacity=0);
+	margin-top: 20%;
+}
+
+/* 3.4 Nuage de Mot */
+
+
+.htmltagcloud {
+	line-height: 5em;
+    word-spacing: 10px;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: center;
+}
+	
+.htmltagcloud a:link, .htmltagcloud a:visited {
+	text-decoration:none;
+}
+
+.htmltagcloud a:hover {
+	color : #F18D6D;
+}
+	
+.htmltagcloud a:active {
+ 	color:black;
+}
+	
+.wrd {
+	padding:15;
+}
+
+
+/* 3.4.1 Animation 1 */
+
+.tagcloud1 {
+ 	font-size:16px;
+	color:#fff;
+	z-index:0;
+	-webkit-animation-name: anim;
+    -webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name : anim;
+	animation-duration : 5s;
+	animation-iteration-count: infinite;
+}
+ 
+.tagcloud1 a {
+	color:#585858;
+	padding: 5px 11px;
+}
+
+@-webkit-keyframes anim {
+    0% {opacity : 0.25;}
+    12.5% {opacity : 0.5;}
+    25% {opacity : 0.75;}
+    37.5% {opacity : 1;}
+	50%{opacity : 0.75;}
+	62.5%{opacity : 0.5;}
+	75%{opacity : 0.25;}
+	87.5%{opacity : 0;}
+	100% {opacity : 0.25;}
+}
+
+@keyframes anim {
+    0% {opacity : 0.25;}
+    12.5% {opacity : 0.5;}
+    25% {opacity : 0.75;}
+    37.5% {opacity : 1;}
+	50%{opacity : 0.75;}
+	62.5%{opacity : 0.5;}
+	75%{opacity : 0.25;}
+	87.5%{opacity : 0;}
+	100% {opacity : 0.25;}
+}
+
+
+/* 3.4.2 Animation 2 */
+
+.tagcloud2{
+	font-size:30px;
+	color:#fff;
+	z-index:0;
+	-webkit-animation-name: anim;
+    -webkit-animation-duration: 5.2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name : anim2;
+	animation-duration : 5.2s;
+	animation-iteration-count: infinite;
+}
+ 
+.tagcloud2 a {
+	color:#585858;
+	padding: 5px 11px;
+}
+
+@-webkit-keyframes anim2 {
+    0% {opacity : 0.5;}
+    12.5% {opacity : 0.75;}
+    25% {opacity : 1;}
+    37.5% {opacity : 0.75;}
+	50%{opacity : 0.5;}
+	62.5%{opacity : 0.25;}
+	75%{opacity : 0;}
+	87.5%{opacity : 0.25;}
+	100% {opacity : 0.5;}
+}
+
+@keyframes anim2 {
+   0% {opacity : 0.5;}
+    12.5% {opacity : 0.75;}
+    25% {opacity : 1;}
+    37.5% {opacity : 0.75;}
+	50%{opacity : 0.5;}
+	62.5%{opacity : 0.25;}
+	75%{opacity : 0;}
+	87.5%{opacity : 0.25;}
+	100% {opacity : 0.5;}
+}
+
+
+/* 3.4.3 Animation 3 */
+
+.tagcloud3 {
+	font-size:24px;
+	color:#fff;
+	z-index:0;
+	-webkit-animation-name: anim;
+    -webkit-aniation-duration: 4.8s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name : anim3;
+	animation-duration : 4.8s;
+	animation-iteration-count: infinite;
+}
+ 
+.tagcloud3 a {
+	color:#585858;
+	padding: 11px;
+}
+
+@-webkit-keyframes anim3 {
+    0% {opacity : 0.75;}
+    12.5% {opacity : 1;}
+    25% {opacity : 0.75;}
+    37.5% {opacity : 0.5;}
+	50%{opacity : 0.25;}
+	62.5%{opacity : 0;}
+	75%{opacity : 0.25;}
+	87.5%{opacity : 0.5;}
+	100% {opacity : 0.75;}
+}
+
+@keyframes anim3 {
+    0% {opacity : 0.75;}
+    12.5% {opacity : 1;}
+    25% {opacity : 0.75;}
+    37.5% {opacity : 0.5;}
+	50%{opacity : 0.25;}
+	62.5%{opacity : 0;}
+	75%{opacity : 0.25;}
+	87.5%{opacity : 0.5;}
+	100% {opacity : 0.75;}
+}
+
+
+/* 3.4.4 Animation 4 */
+
+.tagcloud4 {
+	font-size:18px;
+	color:#fff;
+	z-index:0;
+	-webkit-animation-name: anim;
+    -webkit-animation-duration: 5.4s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name : anim4;
+	animation-duration : 5.4s;
+	animation-iteration-count: infinite;
+}
+ 
+.tagcloud4 a {
+	color:#585858;
+	padding: 5px 11px;
+}
+
+@-webkit-keyframes anim4 {
+    0% {opacity : 0;}
+    12.5% {opacity : 0.25;}
+    25% {opacity : 0.5;}
+    37.5% {opacity : 0.75;}
+	50%{opacity : 1;}
+	62.5%{opacity : 0.75;}
+	75%{opacity : 0.5;}
+	87.5%{opacity : 0.25;}
+	100% {opacity : 0;}
+}
+
+@keyframes anim4 {
+    0% {opacity : 0;}
+    12.5% {opacity : 0.25;}
+    25% {opacity : 0.5;}
+    37.5% {opacity : 0.75;}
+	50%{opacity : 1;}
+	62.5%{opacity : 0.75;}
+	75%{opacity : 0.5;}
+	87.5%{opacity : 0.25;}
+	100% {opacity : 0;}
+}
+
+/* 3.5 Pop up */
+
+
+.modal-content{
+	padding-top: 50px;
+	background-color:  #cddbe6;
+}
+
+.modal-content, input{
+	background-color:  #e5e5e5;
+}
+
+#popup{
+  color: #E6E6E6;
+  position: fixed;
+  top: 150px;
+  height: 450px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+
+#popup_content {
+  position: relative;
+   background: url('images/fond_popUp.png') no-repeat;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  }
+
+#popup_header {
+  padding: 110px 175px 15px 115px;
+  border-bottom: none;
+  color: #E6E6E6;
+}
+
+#popup_title{
+	text-align: center;
+}
+
+#popup_close{
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#popup_body{
+	padding: 0px 160px 0px 85px;
+	text-align: justify;
+	line-height: 13px;
+}
+
+#message{
+	text-align: right;
+	margin: 0px 0px 0px 140px;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #838ea2;
+  border-color: #838ea2;
+}
+
+.btn-success:hover {
+   color: #fff;
+  background-color: #838ea2;
+  border-color: #838ea2;
+  }
+
+  .btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open > .dropdown-toggle.btn-success.focus {
+   color: #fff;
+  background-color: #838ea2;
+  border-color: #838ea2;
+}
+
+  .btn-warning {
+  color: #fff;
+  background-color: #f18d6d;
+  border-color: #f18d6d;
+}
+
+.btn-warning:hover {
+   color: #fff;
+  background-color: #f18d6d;
+  border-color: #f18d6d;
+  }
+
+  .btn-warning:active:hover,
+.btn-warning.active:hover,
+.open > .dropdown-toggle.btn-warning:hover,
+.btn-warning:active:focus,
+.btn-warning.active:focus,
+.open > .dropdown-toggle.btn-warning:focus,
+.btn-warning:active.focus,
+.btn-warning.active.focus,
+.open > .dropdown-toggle.btn-warning.focus {
+  color: #fff;
+  background-color: #f18d6d;
+  border-color: #f18d6d;
+}
+
+
+/* 4.0 Creation terminees */
+
+
+/* 4.1 Presentation */
+
+.btn-CT{
+	margin-top : 20%;
+}
+
+.btn-CT-pres, .btn-CT-com{
+	display : block;
+	border : 1px solid black;
+	text-align : center;
+	margin : 5px auto;
+	width : 100%;
+	height : 40px;
+	font-size : 14px;
+	outline:none;
+	color : black;
+	background-color: transparent;
+}
+
+.btn-CT-pres:hover, .btn-CT-com:hover, .btn-CT .active {
+	background-color: #585858;
+	border : 1px solid #585858;
+	color : white;
+}
+
+.NomCrea{
+	margin: 0px;
+	color : #838EA2;
+	font-size : 17px;
+	font-weight: bold;
+	text-align : center;
+}
+
+.statu{
+	text-align : center;
+	color : #F18D6D;
+	font-size : 18px;
+}
+
+.CTpresentation .row {
+	margin: 0px;
+}
+
+.CTpresentation figure {
+	display: inline-block;
+	width: 12%;
+}
+
+.CTpresentation figcaption {
+	font-size: 16px;
+}
+
+.img-CTpresentation {
+	width:100%;
+	margin : 35px auto 10px;
+	display: block;
+}
+
+.block-pres {
+	text-align: center;
+	font-size: 18px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: block;
+    width: 40%;
+    margin: 20px auto 40px auto;
+}
+
+.block-pres-date {
+	margin-top : 22px;
+	text-align:center;
+}
+
+.block-pres-description {
+	margin-top : 25px;
+	padding :10px 10px 10px 10px;
+	text-align: justify;
+	border : 1px solid #585858;
+}
+
+.block-pres-nom {
+	text-align: center;
+	font-size : 16px;
+	margin-bottom : 30px;
+}
+
+.img-creaTerm {
+	width:30%;
+	display: block;
+    margin: 20px auto 5px auto;
+}
+
+
+/* 4.2 Commentaire */
+
+.CTcommentaire figure {
+	display: inline-block;
+	width: 100%;
+}
+
+.CTcommentaire .commentaireUser:last-child {
+	border: none;
+}
+
+.CTcommentaire .commentaireUser {
+	border-bottom: 1px solid #000;
+	padding: 5px 0px;
+}
+
+.photoprofil {
+	text-align:center;	
+	margin-top : 30px;
+	margin-bottom : 30px;
+}
+
+.img-auteur {
+	margin : 4% 2% 4% 0;
+	width : 70%;
+}
+
+.instrument img {
+	margin : 0 auto;
+	width: 28%;
+	display: block;
+}
+
+
+.instrument p {
+	text-align:center;
+    font-size: 18px;
+
+} 
+
+.mot-cle {
+	font-size : 15px;
+	text-align :center;
+	margin-top: 30px;
+}
+
+/* 4.2 Commentaires */
+
+.cadreCTcommentaire {
+	border : 1px solid black;
+}
+
+.CTcommentaire .row {
+	margin: 0px;
+}
+
+.CTcommentaire .messageForm input {
+	display: block;
+    border: 1px solid #565656;
+    width: 40%;
+    border-radius: 5px;
+    color: #000;
+    background-color: transparent;
+    float:right;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.CTcommentaire .messageForm {
+	position:relative;
+}
+
+.nomCom {
+	width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.dateCom {
+	font-size: 12px;
+	font-weight : normal;
+	display:block;
+}
+
+.commentaire-user {
+	display : inline-block;
+	font-size : 16px;
+	margin-top : 2%;
+	color : #565656;
+}
+
+.commentaire-statu {
+	display : inline-block;
+	font-size : 14px;
+	margin-top : 2%;
+	color : #F18D6D;
+}
+
+.img-auteur-com {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+}
+
+.com2 {
+	margin-left : 60px;
+}
+
+.CTcommentaire textarea {
+	border:1px solid #565656;
+	border-radius: 5px;
+	background-color : transparent;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.btn-CT-envoyer {
+	display: block;
+    border: 1px solid #565656;
+    width: 100%;
+    border-radius: 5px;
+    color: #000;
+    background-color: transparent;
+}
+
+.btn-CT-envoyer:hover {
+    background-color: #565656;
+    border: 2px solid #565656;
+}
+
+
+/* 4.3 Page */
+
+.CTpage img {
+	width: 100%;
+}
+
+.CTpage .hovereffect {
+	width: 100%;
+	height: 100%;
+  	float: left;
+  	overflow: hidden;
+  	position: relative;
+  	text-align: center;
+}
+
+.CTpage .hovereffect .overlay:hover {
+	opacity: 1;
+}
+
+.CTpage .hovereffect a, .CTpage .hovereffect a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.CTpage .hovereffect .titleOverlay {
+	opacity: 0;
+}
+
+.CTpage .hovereffect .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+}
+
+.CTpage .hovereffect img {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.CTpage .hovereffect h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	filter: alpha(opacity=0);
+	margin-top: 40%;
+}
+
+
+
+/* 5.0 Création en cours */
+
+
+/* 5.1 Presentation */
+.CECpresentation .row {
+	margin: 0px;
+}
+
+.CECpresentation figure {
+	display: inline-block;
+	width: 12%;
+}
+
+.CECpresentation figcaption {
+	font-size: 16px;
+}
+
+
+/* 5.2 Page */
+
+.CECpage .row {
+	margin: 0px;
+}
+
+.CECpage .hovereffect {
+	width: 100%;
+	height: 100%;
+  	float: left;
+  	overflow: hidden;
+  	position: relative;
+  	text-align: center;
+}
+
+.CECpage .hovereffect .overlay:hover {
+	opacity: 1;
+}
+
+.CECpage .hovereffect a, .CECpage .hovereffect a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.CECpage .hovereffect .titleOverlay {
+	opacity: 0;
+}
+
+.CECpage .hovereffect {
+	width: 100%;
+}
+
+.CECpage .hovereffect .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: rgba(0,0,0,0.5);
+}
+
+.CECpage .hovereffect img {
+	display: block;
+	position: relative;
+	width: 100%;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+}
+
+.CECpage .hovereffect h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	filter: alpha(opacity=0);
+	margin-top: 20%;
+}
+
+/* 6.0 Mes créations */
+
+
+/* 6.1 Menu Mes créations */
+
+.btn-MC {
+	display : block;
+	border : 1px solid black;
+	text-align : center;
+	margin : 0px auto;
+	margin-bottom : 25px;
+	width : 100%;
+	height : 40px;
+	font-size : 14px;
+	outline:none;
+	color : black;
+	background-color: transparent;
+}
+
+.btn-MC-pro {
+	display : block;
+	border : 1px solid black;
+	text-align : center;
+	margin : 100px auto;
+	width : 100%;
+	height : 40px;
+	font-size : 14px;
+	outline:none;
+	color : black;
+	background-color: transparent;
+}
+
+.btn-MC:hover, .btn-MC-pro:hover {
+	background-color: #585858;
+	border : 1px solid #585858;
+	color : white;
+}
+
+.profil-crea {
+	margin: 0px;
+	color : #838EA2;
+	font-size : 17px;
+	font-weight: bold;
+	text-align : center;
+}
+
+.img-mesCrea {
+	width:75%;
+	margin : 35px auto 10px;
+	display: block;
+}
+
+
+/* 6.2 Mes projets en cours */
+
+
+/* 6.2.1 Conversation */
+
+.conversation {
+	border : 1px solid #585858;
+	margin-bottom : 10px;
+	margin-top:0px;
+}
+
+.conversation .profilsConversation {
+    text-align: center;
+    margin:0px;
+    padding: 5px 0px;
+    color:#fff;
+    background-color:#575757;
+}
+
+.conversation figure {
+	display: inline-block;
+	width: 12%;
+	
+}
+
+.conversation .img-auteur {
+    margin: 4% 2% 4% 0;
+    width: 80%;
+}
+
+.conversation figcaption {
+	font-size:10px;
+}
+
+.conversation .colLeft {
+	border-right: 1px solid #585858;
+	padding:0px;
+}
+
+.conversation .colLeft .nomConversation:first-child{
+	border-top:0px;
+}
+
+.conversation .colRight {
+	padding: 0px;
+	height: 680px;
+}
+.conversation .colRight .profilConversation {
+	margin:0px;
+}
+
+.colRight .messageConversationLeft, .colRight .messageConversationRight{
+	margin:5px 0px;
+}
+
+.colRight .messageConversationLeft img {
+	width:100%;
+	margin-top:10px;
+}
+
+.messageConversationLeft .messageImage {
+	padding-right:0px;
+}
+
+.messageConversationLeft span{
+	font-size: 10px;
+	margin-left:10px;
+}
+
+.messageConversationLeft p, .messageConversationRight p {
+	border:1px solid #575757;
+	border-radius: 5px;
+	padding:5px;
+}
+
+.messageForm{
+	position:absolute;
+	bottom:0px;
+}
+
+.messageForm textarea {
+	border:1px solid #565656;
+	border-radius: 3px;
+	background-color : transparent;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.messageForm input {
+	display: block;
+    border: 1px solid #565656;
+    width: 40%;
+    border-radius: 5px;
+    color: #000;
+    background-color: transparent;
+    float:right;
+    margin-top:10px;
+}
+
+.messageForm input:hover{
+    background-color: #565656;
+    border: 2px solid #565656;
+}
+
+.conversation .nomConversation:hover {
+	background-color:#585858;
+	color:#fff;
+}
+
+.conversation .nomConversation {
+	border-top:1px solid #585858;
+	padding:5px 0px;
+	text-align:center;
+	text-transform: uppercase;
+	font-size: 16px;
+	width:100%; 
+}
+
+.conversation .nomConversation .circle{
+    margin:10px 0px 10px 10px;
+    width:30px;
+    background:#838EA2;
+    height:30px;
+    text-align:center;
+    border-radius:30px;
+    line-height: 30px;
+    display:block;
+    float:left;
+}
+
+.conversation .nomConversation p {
+	margin:15px 0px;
+}
+
+.headerConversation {
+	background-color:#575757;
+	margin:0px;
+	border: 1px solid #585858;
+}
+
+.headerConversation .profilsConversation {
+    text-align: center;
+    margin:0px;
+    padding: 5px 0px;
+    color:#fff;
+}
+
+.headerConversation figure {
+	display: inline-block;
+	width: 12%;
+	
+}
+
+.headerConversation .img-auteur {
+    margin: 4% 2% 4% 0;
+    width: 80%;
+}
+
+.headerConversation figcaption {
+	font-size:10px;
+}
+
+.headerConversation .colLeft {
+	border-right: 1px solid #585858;
+	padding:0px;
+}
+
+
+.headerConversation .colRight {
+	padding:0px;
+}
+.headerConversation .colRight .profilConversation {
+	margin:0px;
+}
+
+.headerConversation .nomConversation {
+	border-top:1px solid #585858;
+	padding:5px 0px;
+	text-align:center;
+	text-transform: uppercase;
+	font-size: 16px;
+	width:100%;
+	background-color:#585858;
+	color:#fff;
+	border:none;
+}
+
+.headerConversation .nomConversation .circle{
+    margin:10px 0px 10px 10px;
+    width:30px;
+    background:#838EA2;
+    height:30px;
+    text-align:center;
+    border-radius:30px;
+    line-height: 30px;
+    display:block;
+    float:left;
+}
+
+.headerConversation .nomConversation p {
+	margin:15px 0px;
+}
+
+
+/* 6.2.2 Player */
+
+iframe {
+	border : none;
+	width: 100%;
+	height: 750px;
+}
+
+
+/* 6.3 Mes projets termines */
+
+
+.mesCreationsTerminees img {
+	width: 100%;
+}
+
+.mesCreationsTerminees .hovereffect {
+	width: 100%;
+	height: 100%;
+  	float: left;
+  	overflow: hidden;
+  	position: relative;
+  	text-align: center;
+}
+
+.mesCreationsTerminees .hovereffect .overlay:hover {
+	opacity: 1;
+}
+
+.mesCreationsTerminees .hovereffect a, .mesCreationsTerminees .hovereffect a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.mesCreationsTerminees .hovereffect .titleOverlay {
+	opacity: 0;
+}
+
+.mesCreationsTerminees .hovereffect .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+}
+
+.mesCreationsTerminees .hovereffect img {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.mesCreationsTerminees .hovereffect h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	filter: alpha(opacity=0);
+	margin-top: 40%;
+}
+
+
+
+/* 7.0 A propos */
+
+.titre-blanc {
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.equipe img {
+	width: 100%;
+	height: 100%;
+}
+
+.equipe p {
+	text-align : center;
+	color : #fff;
+	margin-top : 10px;
+	font-size : 20px;
+}
+
+.img-LP {
+	display : block; 
+	width : 160px;
+	height : 160px;
+	border-radius : 50% ;
+	margin : 0 auto;
+	
+}
+.btn-telecharger {
+	width: 80%;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+	background-color : transparent;
+	border : 1px solid black;
+}
+
+.btn-telecharger:hover {
+	background-color: #585858;
+	border : 1px solid #585858;
+	color : #fff;
+}
+
+
+
+.form-horizontal, #contactForm
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-horizontal input, .form-horizontal textarea {
+	margin: 8px 0px;
+}
+
+#contact
+{
+	text-align: center;
+	color: #f18d6d;
+}
+
+.btn, #bouton_contact
+{
+	text-align: right;
+}
+.btn-default, #bouton_contact
+{
+	margin-left: 0;
+	color: #fff;
+  	background-color: #e83e67;
+  	border: none;
+}
+/* 8.0 Global */
+
+.fondGris {
+	background-color: #E6E6E6;
+    z-index: 999;
+    margin-top: 0;
+    padding: 30px 0px;
+}
+
+.CECIndex .responsive, .CECpage .responsive{
+	margin:10px 0px;
+}
+
+.cadre {
+	padding: 20px;
+	border : 1px solid #585858;
+	margin-bottom : 35px;
+}
+
+/* 9.0 Footer */
+
+.a-propos a, .a-propos a:hover {
+	padding-top: 20%;
+	font-size : 20px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.faq a, .faq a:hover {
+	font-size : 20px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.a-propos{
+	padding-top: 2%;
+}
+
+.faq{
+	padding-top: 2%;
+}
+
+.reseaux-sociaux{
+	padding-top : 2%;
+}
+.reseaux-sociaux img{
+	float : left;
+	margin-right : 4%;	
+	width :16%	;
+}
+
+
+/* 10.0 Media Queries */
+
+@media (min-width: 0px) and (max-width: 500px) {
+	.headerConversation figure {
+    	width: 25%;
+	}
+	.conversation .responsive {
+		display: none;
+	}
+	.conversation .colRight {
+		height: 620px;
+	}
+	.outilSon {
+    	width: 100%;
+   	 	margin: 0px;
+	}
+	iframe {
+		height:950px;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+	.headerConversation figure {
+    display: inline-block;
+    width: 16%;
+	}
+	.conversation .responsive:first-child {
+		display: none;
+	}
+	.conversation .colRight {
+		height: 620px;
+	}
+}
+
+/* Responsive bootstrap */
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width:768px) {
+	
+	/* Global */
+	.CTIndex .responsive, .CTpage .responsive {
+		margin: 20px 0px;
+	}
+	.CTIndex .row, .CTpage .row {
+		margin: 0px;
+	}
+	/* Page d'accueil */
+	.tagcloud1 {
+		font-size:14px;
+	}
+	.tagcloud2 {
+		font-size:30px;
+	}
+	.tagcloud3 {
+		font-size:18px;
+	}
+	.tagcloud4 {
+		font-size:12px;
+	}
+	/* Footer */
+	.a-propos a, .a-proppos a:hover, .faq a, .faq a:hover {
+		font-size: 12px;
+	}
+	.a-propos, .faq, .reseaux-sociaux {
+		padding:0px;
+	}
+	.footer .row {
+		margin:5px;
+	}
+	/* Page de presentation d'une creation en cours et terminee */
+	.CTpresentation figure, .CECpresentation figure {
+		width:30%;
+	}
+	.CTpresentation .btn-CT input, .CECpresentation .btn-CT input {
+		width:100%;
+		font-size:10px;
+	}
+	.profilCreaTerminee, .profilCreaEnCours {
+		width: 40%;
+		float: left;
+	}
+	.profilCreaTerminee img, .profilCreaEnCours img {
+		width: 60%;
+		margin-top:0px;
+	}
+	/* Mes creations en cours et Mes creations terminees */
+	.profilMesCreations {
+		width: 40%;
+		float: left;
+	}
+	.profilMesCreations img {
+		width: 60%;
+		margin-top:0px;
+	}
+	.btn-CT {
+		width:60%;
+		float: left;
+		margin:0px;
+	}
+	.btn-CT input {
+		width: 100%;
+		margin:5px auto;
+		font-size: 12px;
+	}
+	.headerConversation .nomConversation .circle, .conversation .nomConversation .circle {
+	    width: 20px;
+	    background: #838EA2;
+	    height: 20px;
+	    text-align: center;
+	    border-radius: 30px;
+	    line-height: 22px;
+	    display: block;
+	    float: left;
+	}
+	.conversation .nomConversation .circle {
+		margin: 12px 0px 5px 5px;
+	}
+	.headerConversation .nomConversation .circle {
+		margin: 20px 0px 5px 5px;
+	}
+	.headerConversation .nomConversation p, .conversation .nomConversation p {
+	    margin: 15px 0px;
+	    font-size: 12px;
+	}
+	/* A propos */
+	.equipe figcaption {
+		margin-bottom:30px;
+	}
+	
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) { 
+	
+	/* Page d'accueil */
+	.tagcloud1 {
+		font-size:15px;
+	}
+	.tagcloud2 {
+		font-size:29px;
+	}
+	.tagcloud3 {
+		font-size:24px;
+	}
+	.tagcloud4 {
+		font-size:17px;
+	}
+	.a-propos, .faq, .reseaux-sociaux {
+		padding:0px;
+	}
+	.footer .row {
+		margin:5px;
+	}
+	/* Mes creations en cours */
+	iframe {
+		height:850px;
+	}
+	/* Page de presentation d'une creation en cours et terminees */
+	.CTpresentation figure, .CECpresentation figure {
+		width:18%;
+	}
+	.CTpresentation .btn-CT input {
+		width:100%;
+		font-size:10px;
+	}
+	.CTpresentation .btn-CT {
+		width: 100%
+	}
+	/* Footer */
+	.a-propos a, .a-proppos a:hover, .faq a, .faq a:hover {
+		font-size: 14px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) { 
+	
+	/* Page d'accueil */
+	.tagcloud1 {
+		font-size:14px;
+	}
+	.tagcloud2 {
+		font-size:29px;
+	}
+	.tagcloud3 {
+		font-size:24px;
+	}
+	.tagcloud4 {
+		font-size:17px;
+	}
+	/* Mes creations en cours et Mes creations terminees*/
+	.mesCreationsEnCours .btn-CT input, .mesCreationsTerminees .btn-CT input {
+		width:100%;
+		font-size:10px;
+	}
+	iframe {
+		height:850px;
+	}
+	.CECpresentation figure {
+		width:18%;
+	}
+	
+	/* Footer */
+	.reseaux-sociaux img {
+		width: 29%;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* Responsive du header */
+
+@media (min-width: 0px) and (max-width: 1300px) {
+	/* Menu */
+	.lienCT {
+		margin-left: 10px;
+	}
+  	.mes_crea {
+    	margin-left: 10px;
+  	}
+	.navbar a {
+		text-align: center;
+	}
+	.navbar .nav > li > a, .navbar .nav > li > a:hover {  
+	    color: white; 
+	    margin-top: 20px;
+	    font-size: 1.15em;
+	    padding-left: 0;
+	    padding-right: 0;
+	    text-decoration: none;
+	}
+	.navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
+
+
+@media (min-width: 770px) and (max-width: 1024px) {
+	/* Menu */
+	.lienCT {
+		background-color : none;
+		border-bottom: solid 25px #e83e67;
+	}
+	.lienCC {
+		background-color : none;
+		border-bottom: solid 25px #f18d6d;
+	}
+	.lienT {
+		background-color : none;
+		border-bottom: solid 25px #f5df94;
+	}
+	#mes_crea {
+		margin-left: 70px;
+	}
+	#bouton {
+		display: block;
+		margin-left: auto;
+	  	margin-right: auto;
+	}
+	#home {
+		display: block;
+		margin-left: auto;
+	  	margin-right: auto;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 770px){
+	/* Menu */
+	.lienCT {
+		background-color : #e83e67;
+		border: none;
+	}
+	.lienCC {
+		background-color: #f18d6d;
+		border: none;
+	}
+	.lienT {
+		background-color:  #f5df94;
+		border: none;
+	}
+	#bouton {
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+	}
+	#home {
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+	}
+	#mes_crea {
+	margin-left: 0px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 1300px) {
+
+
+	
+	.lienCT 
+	{
+		margin-left: 10px;
+	}
+
+  .mes_crea
+  {
+    margin-left: 10px;
+  }
+
+  .navbar a
+  {
+  	text-align: center;
+  }
+
+  .navbar .nav > li > a 
+	{  
+	    color: white; 
+	    margin-top: 20px;
+	    font-size: 1.15em;
+	    padding-left: 0;
+	    padding-right: 0;
+	} 
+
+	.navbar .nav > li > a, .navbar .nav > li > a:hover 
+	{  
+	    color: white; 
+	    margin-top: 20px;
+	    font-size: 1.15em;
+	    padding-left: 0;
+	    padding-right: 0;
+	    text-decoration: none;
+	}
+
+	
+
+ 
+
+ 
+
+}
+@media (min-width: 770px) and (max-width: 1024px) {
+
+.lienCT {
+	background-color : none;
+	border-bottom: solid 25px #e83e67;
+}
+
+
+.lienCC {
+	background-color : none;
+	border-bottom: solid 25px #f18d6d;
+}
+
+.lienT {
+	background-color : none;
+	border-bottom: solid 25px #f5df94;
+}
+
+
+
+#mes_crea {
+	margin-left: 70px;
+}
+
+#bouton{
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+#home{
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+ 
+
+}
+
+@media (min-width: 0px) and (max-width: 770px){
+
+	.lienCT {
+	background-color : #e83e67;
+	border: none;
+}
+
+
+.lienCC {
+	background-color: #f18d6d;
+	border: none;
+}
+
+.lienT {
+	background-color:  #f5df94;
+	border: none;
+}
+
+
+#bouton{
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+#home{
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+#mes_crea {
+	margin-left: 0px;
+}
+
+#popup{
+  color: black;
+  position: fixed;
+  top: 50px;
+}
+
+ #popup_content {
+  position: relative;
+   background: url('images/fond_popUpmin.png') ;
+
+  }
+
+
+#popup_header {
+  padding: 80px 15px 15px 15px;
+  color: #f18d6d;
+}
+
+
+
+
+#popup_body{
+	padding: 0px 10px 10px 10px;
+	color: #E6E6E6;
+}
+
+#message{
+	margin: 0px 0px 0px 90px;
+}
+
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artezic</title>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> <!-- GoogleFont Roboto Condensed -->
+   <link rel="icon" type="image/png" href="images/logo.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="accesjson.js"></script>
+</head>
+  
+<body>
+
+
+
+<nav class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" data-target=".navbar-collapse" class="navbar-toggle" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a href="index.html"><img src="images/logo.png" alt="logo artezic" id="logo"/></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li><a href="creationsTerminees.html" class="lienCT">CREATIONS TERMINEES</a></li>
+        <li><a href="creationsEnCours.html" class="lienCC">CREATIONS EN COURS</a></li>
+        <li><a href="#sdfsdf" id="themes" class="lienT">THEMES</a></li>
+        <li><a href="mesProjetsEnCours.html" id="mes_crea">MES CREATIONS</a></li>
+        <li><button class="btn btn-default btn-lg" data-toggle="modal" type="button" id="bouton" data-target="#search" title="recherche">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </li>
+        <li><button class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" type="button" id="home" title="CONNEXION">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ul>
+      <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">RECHERCHE</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">RECHERCHE</label>
+                  <div class="col-sm-10">
+                    <input required type="text" class="form-control" placeholder="Recherche">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">CONNEXION</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Identifiant</label>
+                  <div class="col-sm-10">
+                    <input required type="email" class="form-control" id="inputEmail3" placeholder="Identifiant">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Mot de passe</label>
+                  <div class="col-sm-10">
+                    <input required type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="cancel" class="btn btn-warning" data-dismiss="modal" >ANNULER</button>
+                    <button type="submit" class="btn btn-success">VALIDER</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+    
+<div class="CECpresentation fondGris">
+  <div class="row">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="row">
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                <div class="profilCreaEnCours">
+                  <img src="images/CreaEnCours/creacour1.png" class="img-CTpresentation" alt="Creation en cours"> 
+                  <p class="NomCrea">Mon Autre Côté</p>
+                  <p class="statu">EN COURS</p>
+                </div>
+                <div class="btn-CT"> 
+                  <input class="btn-CT-pres active" type="submit" value ="PRÉSENTATION" onclick="window.location='projet-en-cours-pres.html';" ><br />
+                  <input class="btn-CT-com" type="submit" value ="COLLABORATION">
+                </div>
+              </div>
+              <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 cadre">
+            <div class="row">
+              <p class="block-pres">CREATEUR</p>
+              <img src="images/photoProfil/Lois.png" class="img-creaTerm" alt="Sarah2">                
+              <p class="block-pres-nom">LOIS J.</p>
+              <p class="block-pres">AUTEURS</p>
+              <div class="photoprofil">
+                <figure>
+                  <img src="images/photoProfil/Eugene.png" class="img-auteur" alt="Eugene">
+                  <figcaption>Eugene R.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/photoProfil/Justine.png" class="img-auteur" alt="Justine">
+                  <figcaption>Justine L.</figcaption>
+                </figure>
+                <figure>
+                  <img src="images/photoProfil/Arthur.png" class="img-auteur" alt="Arthur">
+                  <figcaption>Arthur P.</figcaption>
+                </figure> 
+                <figure>
+                  <img src="images/photoProfil/Eric.png" class="img-auteur" alt="Eric">
+                  <figcaption>Eric H.</figcaption>
+                </figure>                  
+              </div>
+              <p class="block-pres">RÉSUMÉ DU PROJET</p>
+              <p class="block-pres-date">DÉBUT DE CRÉATION : 25 DÉCEMBRE 2016<br />DURÉE : 1 Mois</p>
+              <p class="block-pres-description">Voici mon premier morceau sur lequel je veux collaborer, merci à tout ceux qui pourrons rendre cela possible. Une composition musicale dans un style qui mélange folk et musique électronique.</p>
+              <p class="block-pres">BESOINS SPÉCIFIQUES</p>
+            </div>
+            
+            <div class="row">
+              <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 instrument">
+                    <img src="images/instrument/micro.png" class="img-instrument" alt="micro">
+                    <p class="p-instrument">CHANTEUR</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 instrument">
+                    <img src="images/instrument/guitare.png" class="img-instrument" alt="guitare">
+                    <p class="p-instrument">GUITARISTE</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 instrument">
+                    <img src="images/instrument/piano.png" class="img-instrument" alt="piano">
+                    <p class="p-instrument">PIANISTE</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 instrument">
+                    <img src="images/instrument/saxo.png" class="img-instrument" alt="saxo">
+                    <p class="p-instrument">SAXOPHONISTE</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 instrument">
+                    <img src="images/instrument/flute.png" class="img-instrument" alt="flute">
+                    <p class="p-instrument">FLÛTISTE</p>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+              </div>
+            </div>
+            <p class="block-pres">MOTS-CLÉS</p>
+            <p class="mot-cle"> JAZZ - ELECTRO - FOLK</p>
+          </div>
+        </div>
+      </div>
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+    
+<div class="footer">
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+      <div class="row">
+        <div class=" col-xs-4 col-sm-2 col-md-3 col-lg-2 a-propos">
+          <p><a href="apropos.html">A PROPOS</a></p>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-2 faq">
+          <p><a href="#"> FAQ </a></p>
+        </div>
+        <div class="col-xs-3 col-sm-5 col-md-4 col-lg-5"></div>  
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-3 reseaux-sociaux">
+          <a href="www.facebook.com"><img src="images/facebook.png" alt="image Facebook"></a>
+          <a href="www.twitter.com"><img src="images/twitter.png" alt="image Facebook" ></a>
+          <a href="www.soundcloud.com"><img src="images/soundcloud.png" alt="image Facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+  </div>
+</div>
+
+<script src="bootstrap/js/jquery.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
